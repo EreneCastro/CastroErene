@@ -75,8 +75,14 @@
       gap:14px;margin-top:10px;
     }
     .gallery img{
-      width:100%;height:280px;object-fit:cover;border-radius:14px;
-      border:4px solid #ff6a00;box-shadow:0 4px 12px rgba(0,0,0,.5);
+      width:100%;
+      height:auto;              /* keep proportions */
+      max-height:400px;         /* optional: limit tall images */
+      object-fit:contain;       /* show full picture */
+      border-radius:14px;
+      border:4px solid #ff6a00;
+      box-shadow:0 4px 12px rgba(0,0,0,.5);
+      background:#000;          /* fills empty space with black */
     }
     .contact a{color:var(--accent);text-decoration:none;font-weight:700}
     .contact a:hover{text-decoration:underline}
@@ -87,7 +93,7 @@
     @media (max-width:520px){
       header img{width:120px;height:120px}
       .edu-years{min-width:110px}
-      .gallery img{height:220px}
+      .gallery img{max-height:260px}
     }
   </style>
 </head>
@@ -145,8 +151,8 @@
     <h2>Hobbies &amp; Passion</h2>
     <p style="text-align:center;">Playing basketball.</p>
     <div class="gallery">
-      <img src="Capturebb2.jpg" 
-      <img src="Capturebb3.jpg" 
+      <img src="Capturebb2.jpg" alt="Basketball portrait">
+      <img src="Capturebb3.jpg" alt="Basketball team group photo">
     </div>
   </div>
 </section>
